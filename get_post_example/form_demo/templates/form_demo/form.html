@@ -1,0 +1,7 @@
+# calculator/forms.py
+from django import forms
+
+class CalculatorForm(forms.Form):
+    first_number = forms.FloatField(label="First Number")
+    second_number = forms.FloatField(label="Second Number")
+    operation = forms.ChoiceField(choices=[('+', 'Add'), ('-', 'Subtract'), ('*', 'Multiply'), ('/', 'Divide')], label="Operation")
